@@ -7,3 +7,5 @@
 2. Log2 transform of $x+1
 
   awk '{print log($1 +1)/log(2)}' filename.txt >filename.norm
+3. Multiple fasta to one line fasta
+  awk '/^>/ {printf("\n%s\n",$0);next; } { printf("%s",$0);}  END {printf("\n");}'
