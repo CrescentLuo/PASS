@@ -15,3 +15,7 @@
 4. Split one file into small files by column value
 
   awk -v name_prefix="name_prefix" '(NR>1){print >  name_prefix$3}' input_file
+
+5. Calculate average value of **column2**
+
+  awk '{ total += $2 } END { print total/NR }' yourFile.whatever
