@@ -30,3 +30,9 @@
 ```
   awk '{ total += $2 } END { print total/NR }' yourFile.whatever
 ```
+
+6. Fing "gene_id" value from GTF file
+
+```
+  awk -F 'gene_id' '{print $2}' GTF.file | awk -F '"' '{print }' 
+```
