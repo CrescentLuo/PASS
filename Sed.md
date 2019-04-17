@@ -14,6 +14,6 @@ sed -i '1s/word1/word2/g' NHEK_pAplus.rci
 
 3. Replace gtf header
 
-```sed
+```bash
   sed -i 's/^>[0-9]\+[…… ]/>/g' mm9_salmon_index.fa
 ```
