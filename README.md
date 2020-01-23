@@ -82,6 +82,13 @@ paste -d'\n' file1 file2
 awk '{ split($3,a,",");{printf "%s ",$1}{for(key in a){printf "%d ",key}};print "\r";next}' file
 ```
 
+9. Split large file and keep the header in every individual file
+
+```bash
+cat gencode.v31.primary_assembly.cryptic.exon.csv | parallel --header : --pipe -N 10000 'cat > gencode.v31.primary_assembly.cryptic.exon.batch{#}.csv'
+```
+
+
 ## Sed
 
 1. Replace **word1** by **word2**
