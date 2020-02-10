@@ -115,3 +115,9 @@ sed -i 's/^>[0-9]\+[^ ]/>/g' mm9_salmon_index.fa
 ```bash
 sed Rfile2 file1
 ```
+
+5. Print certain line of a file
+
+```bash
+sed -n LINE_NUMBERp file.txt
+```
