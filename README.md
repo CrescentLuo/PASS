@@ -121,3 +121,14 @@ sed Rfile2 file1
 ```bash
 sed -n LINE_NUMBERp file.txt
 ```
+## Pure bash
+1. Generate combinations of two files
+```bash
+while read a
+do
+    while read b
+    do
+        echo $a"\t"$b
+    done < hACTB-R1.bed
+done < hACTB-F1.bed
+```
